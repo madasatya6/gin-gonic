@@ -11,9 +11,9 @@ import (
 
 var CONFIG_SMTP_HOST = "smtp.gmail.com"
 var CONFIG_SMTP_PORT = 587
-var CONFIG_SENDER_NAME = "UD MADA JAYA <madasatya6@gmail.com>"
-var CONFIG_AUTH_EMAIL = "madasatya6@gmail.com"
-var CONFIG_AUTH_PASSWORD = "ranggaMsba643043055"
+var CONFIG_SENDER_NAME = "MADA JAYA <admin@gmail.com>"
+var CONFIG_AUTH_EMAIL = "admin@gmail.com"
+var CONFIG_AUTH_PASSWORD = "123456"
 
 func SendGomail(subject string, toEmail string, emailCc []string, titleCc string, viewLocation string, data map[string]interface{}, fileAttachment []string) error {
 	

@@ -12,8 +12,8 @@ import (
 
 //@reference https://medium.com/google-cloud/firebase-developing-serverless-functions-in-go-963cb011265d
 var Client *db.Client
-var CredentialFile = "market-firebase.json"
-var DatabaseURL = "https://market-74e28-default-rtdb.firebaseio.com/"
+var CredentialFile = "coba-firebase.json" //file ini terletak di sejajar main.go
+var DatabaseURL = "https://coba-1234-default-rtdb.firebaseio.com/"
 
 func FirebaseConns(ctx context.Context) (*db.Client, *firebase.App, error) {
 	

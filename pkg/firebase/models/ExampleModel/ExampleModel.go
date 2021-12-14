@@ -44,7 +44,7 @@ func Insert(ctx context.Context, initDb *db.Client) (*Example, error) {
 	db := initDb.NewRef(TableName)
     blog := &Example{
 		ID:        uuid.NewV4(),
-		URI:       url.QueryEscape("http://localhost:9090/"),
+		URI:       url.QueryEscape("http://localhost:8080/"),
 		ImageURL:  "url image here",
 		Category:  "category",
 		Title:     "title",
