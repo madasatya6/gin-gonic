@@ -24,9 +24,10 @@ import (
 
 // NewRouter -.
 // Swagger spec:
+// @Dev			madasatya6 & evron 
 // @title       Go Clean Template API
 // @description Using a translation service as an example
-// @version     1.0
+// @version     2.1.2
 // @host        localhost:8080
 // @BasePath    /v1
 func NewRouter(handler *gin.Engine, l logger.Interface, t usecase.Translation) {

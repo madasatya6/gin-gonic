@@ -20,7 +20,7 @@ func (r *translationRoutes) SendEmail(c *gin.Context) {
 		"app/static/img/gin.png",
 	}
 	
-	err := gomail.SendGomail("Sendmail with Gin", "bayu.ambika@gmail.com", nil, "", "example/mail.html", data, fileAttachment)
+	err := gomail.SendGomail("Sendmail with Gin", "email.tujuan@gmail.com", nil, "", "example/mail.html", data, fileAttachment)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"status": false,

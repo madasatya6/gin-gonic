@@ -1,6 +1,6 @@
 app:
   name: 'go-clean-template'
-  version: '1.0.0'
+  version: '2.1.2'
 
 http:
   port: '8080'
@@ -11,7 +11,7 @@ logger:
 
 postgres:
   pool_max: 2
-  pg_url: 'postgres://postgres:@Lampupijar77@localhost:5432/market'
+  pg_url: 'postgres://username:password@localhost:5432/dbname'
 
 rabbitmq:
   rpc_server_exchange: 'rpc_server'
