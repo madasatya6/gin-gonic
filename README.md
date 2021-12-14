@@ -271,11 +271,3 @@ In addition to Clean architecture, _Onion architecture_ and _Hexagonal_ (_Ports 
 Both are based on the principle of Dependency Inversion.
 _Ports and adapters_ are very close to _Clean Architecture_, the differences are mainly in terminology.
 
-
-## Similar projects
-- [https://github.com/bxcodec/go-clean-arch](https://github.com/bxcodec/go-clean-arch)
-- [https://github.com/zhashkevych/courses-backend](https://github.com/zhashkevych/courses-backend)
-
-## Useful links
-- [The Clean Architecture article](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- [Twelve factors](https://12factor.net/ru/)
