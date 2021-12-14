@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.title}}</title>
+		<style>
+			p{
+				color:red;
+			}
+		</style>
+    </head>
+    <body>
+		<h3>Form Data Diri</h3>
+		<br/>
+		<form action="/example/form-multiple-post" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="_csrf" value="{{.csrf_token}}" />
+			<table border="0">
+				<tr>
+					<td>Mahasiswa 1</td>
+					<td>:</td>
+					<td>
+						<p>{{FormError .Context "Nama"}}</p>
+						<input type="text" name="data[][nama]" placeholder="Nama"/> <br/>
+						<p>{{FormError .Context "Alamat"}}</p>
+						<input type="text" name="data[][alamat]" placeholder="Alamat" /> <br/>
+						<p>{{FormError .Context "Umur"}}</p>
+						<input type="text" name="data[][umur]" placeholder="Umur" /> <br/><br/>
+						Hobby : <input type="text" name="data[][hobbies][]" placeholder="Hobby 1" /> &nbsp; <input type="text" name="data[][hobbies][]" placeholder="Hobby 2" />
+					</td>
+				</tr>
+				<tr>
+					<td>Mahasiswa 2</td>
+					<td>:</td>
+					<td>
+						<p>{{FormError .Context "Nama"}}</p>
+						<input type="text" name="data[][nama]" placeholder="Nama"/> <br/>
+						<p>{{FormError .Context "Alamat"}}</p>
+						<input type="text" name="data[][alamat]" placeholder="Alamat" /> <br/>
+						<p>{{FormError .Context "Umur"}}</p>
+						<input type="text" name="data[][umur]" placeholder="Umur" /><br/><br/>
+						Hobby : <input type="text" name="data[][hobbies][]" placeholder="Hobby 1" /> &nbsp; <input type="text" name="data[][hobbies][]" placeholder="Hobby 2" />
+					
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="save" value="Posting"/></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.title}}</title>
+		<style>
+			p{
+				color:red;
+			}
+		</style>
+    </head>
+    <body>
+		<h3>Form Data Diri</h3>
+		<br/>
+		<form action="/example/validate" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="_csrf" value="{{.csrf_token}}" />
+			<table border="0">
+				<tr>
+					<td>Nama <p>{{SlcToString .FormNama}}</p></td>
+					<td>:</td>
+					<td><input type="text" name="nama" placeholder="Nama"/></td>
+				</tr>
+				<tr>
+					<td>Alamat <p>{{SlcToString .FormAlamat}}</p></td>
+					<td>:</td>
+					<td><input type="text" name="alamat" placeholder="Alamat" /></td>
+				</tr>
+				<tr>
+					<td>Umur <p>{{SlcToString .FormUmur}}</p></td>
+					<td>:</td>
+					<td><input type="text" name="umur" placeholder="Umur" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="save" value="Posting"/></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+    </body>
+</html>

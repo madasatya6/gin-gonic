@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.title}}</title>
+		<style>
+			p{
+				color:red;
+			}
+		</style>
+    </head>
+    <body>
+		<img src="/assets/img/english.png" style="width:15px;"/>
+		<img src="/assets/img/indo.png" style="width:15px;"/>
+		<form method="GET">
+			<!-- <input type="hidden" name="_csrf" value="{{.csrf_token}}" /> -->
+			<select name="language">
+				<option value="">{{Text "language"}}</option>
+				<option value="en" {{if eq .language "en"}} selected {{end}}> English</option>
+				<option value="id" {{if eq .language "id"}} selected {{end}}> Indonesia</option>
+			</select>
+			<button type="submit">Go!</button>
+		</form>
+			
+		<table>
+			<tr>
+				<td>{{Text "learn_gin"}}</td>
+			</tr>
+			<tr>
+				<td>{{Text "welcome_to_gingonic"}}</td>
+			</tr>
+			<tr>
+				<td>{{Text "languange_feature"}}</td>
+			</tr>
+			<tr>
+				<td>{{Text "new_year_holiday"}}</td>
+			</tr>
+			<tr>
+				<td>{{Text "idul_fitri_holiday"}}</td>
+			</tr>
+		</table>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.title}}</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			p{
+				color:red;
+			}
+		</style>
+    </head>
+    <body>
+		<h3>Data Settings</h3>
+		<br/>
+		<table border="1">
+			<tr>
+				<td>No</p></td>
+				<td>Name</td>
+				<td>Value</td>
+				<td>Field Type</td>
+				<td>Tab</td>
+			</tr>
+			{{range $i, $key := .settings.posts}}
+			<tr>
+				<td>{{$key.ID}}</p></td>
+				<td>{{$key.Name}}</td>
+				<td>{{$key.Value}}</td>
+				<td>{{$key.FieldType}}</td>
+				<td>{{$key.Tab}}</td>
+			</tr>
+			{{end}}
+		</table>
+    </body>
+	<!-- pagination -->
+	{{ShowPagination .context "style1" .settings}}
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+	<title>{{.title}}</title>
+</head>
+<body>
+<script>
+	function setSrcQuery(e, q) {
+		var src  = e.src;
+		var p = src.indexOf('?');
+		if (p >= 0) {
+			src = src.substr(0, p);
+		}
+		e.src = src + "?" + q
+	}
+	function reload() {
+		setSrcQuery(document.getElementById('image'), "reload=" + (new Date()).getTime());
+		return false;
+	}
+</script>
+<form action="/example/captcha-post" method=post>
+	<input type="hidden" name="_csrf" value="{{.csrf_token}}" />
+	<p>Type the numbers you see in the picture below:</p>
+
+	<p><img id=image src="/captcha" alt="Captcha image"></p>
+	<a href="javascript:void(0)" onclick="reload()">Reload</a> <br/>
+	
+	<input type="text" name="captcha">
+	<button type="submit">Kirim</button>
+</form>
+</body>
+</html>

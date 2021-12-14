@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.title}}</title>
+		<style>
+			p{
+				color:red;
+			}
+		</style>
+    </head>
+    <body>
+		<h3>Form Upload</h3>
+		<br/>
+		<form action="/example/upload-post" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="_csrf" value="{{.csrf_token}}" />
+			<table border="0">
+				<tr>
+					<td>File <p>{{SlcToString .FormFile}}</p></td>
+					<td>:</td>
+					<td><input type="file" name="file" placeholder="Image"/></td>
+				</tr>
+				<tr>
+					<td>Name <p>{{SlcToString .FormNama}}</p></td>
+					<td>:</td>
+					<td><input type="text" name="nama" placeholder="Rename File"/></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="save" value="Simpan"/></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+    </body>
+</html>
